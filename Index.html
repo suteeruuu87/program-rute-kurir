@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Route Lab – SA-TSP PENGHITUNGAN</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="app">
+  <div id="map"></div>
+
+  <div id="panel">
+    <div id="panel-inner">
+
+      <h1>Route Lab (Indonesia Map)</h1>
+      <p class="small">
+        Klik peta untuk menambah titik. Pilih Start & Goal. Jalankan algoritma:
+        <strong>SA-TSP</strong><br>
+        Semua jalur mengikuti <strong>jalan asli OSRM</strong>.
+      </p>
+
+      <section class="section">
+        <h2>Kontrol Titik</h2>
+        <div class="row">
+          <button id="btnClearPoints">Hapus Semua Titik</button>
+          <button id="btnRandomPoints">Tambah 5 Titik Acak</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Cari Lokasi</h2>
+        <input id="searchInput" type="text" placeholder="Monas, Bandung, Serang..." />
+        <button id="btnSearchLocation">Cari dan Tambahkan Titik</button>
+      </section>
+
+      <section class="section">
+        <h2>Start & Goal</h2>
+        <label>Start Node</label>
+        <select id="startSelect"></select>
+        <label>Goal Node</label>
+        <select id="goalSelect"></select>
+      </section>
+
+      <section class="section">
+        <h2>Statistik</h2>
+        <div id="stats">Belum ada perhitungan.</div>
+      </section>
+
+      <section class="section">
+        <h2>Daftar Titik</h2>
+        <ol id="pointsList"></ol>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
